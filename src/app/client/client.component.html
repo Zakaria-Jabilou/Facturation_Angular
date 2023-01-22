@@ -1,0 +1,36 @@
+<div class="container mt-2">
+
+     <div class="card">
+      <div *ngIf="erreurMessage">
+        {{erreurMessage | json}}
+      </div>
+      <div class="card-header">Clients</div>
+      <div class="card-body">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Email</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let c of client">
+            <td>{{c.id}}</td>
+            <td>{{c.nom}}</td>
+            <td>{{c.email}}</td>
+            <td><button type="button" routerLink="/facturation/{{c.id}}" class="btn btn-primary">Facturation</button></td>
+
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+</div>

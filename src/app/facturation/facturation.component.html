@@ -1,0 +1,33 @@
+<div class="container mt-2">
+  <div class="card">
+    <div class="card-header">Clients</div>
+    <div *ngIf="facture" >
+    <div class="card-header">Date Fature:{{facture["dateFature"]}}</div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of facture.listeProduits">
+          <td>{{c.id}}</td>
+          <td>{{c.quantite}}</td>
+          <td>{{c.nom}}</td>
+
+
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div>
+</div>
